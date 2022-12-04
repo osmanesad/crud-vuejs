@@ -12,8 +12,15 @@
 <body>
     <div id="app">{{ message}} <br> 
         <input type="text" v-model="UserMessage"/>
-       <h2>{{ UserMessage }}</h2> 
+       
+        <!-- <h2>{{ UserMessage }}</h2>    Alt + Shift + A (Comment Line Shortcut)--> 
     
+        <ul>
+            <li v-for="comment in allUserComment"> <!-- Bildiğin for döngüsünü cümle kurar gibi yazdık. -->
+                {{comment}}
+            </li>
+        </ul>
+
     </div>
     
 
@@ -24,7 +31,12 @@
           data() {
             return {
               message: 'Hello Vue!',
-              UserMessage: "Vue.js ile CRUD işlemlerini yapıyoruz."
+              UserMessage: "",
+              allUserComment: [
+                "Vue is the best js framework!",
+                "Vue ile neler yapabilirim?",
+                "Vue and CRUD operations."
+              ]
             }
           }
         }).mount('#app')
