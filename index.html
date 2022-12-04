@@ -12,7 +12,7 @@
 <body>
     <div id="app">{{ message}} <br> 
         <input type="text" v-model="UserMessage" v-on:keyup.enter="addComment"/> <!-- "v-on:keyup.enter" kısmını "@keyup.enter" şeklinde de yazılabilir. -->
-        <button @click="addComment">Mesajı Ekle</button>
+        <button v-if="UserMessage.length>0" @click="addComment">Mesajı Ekle</button>
        
         <!-- <h2>{{ UserMessage }}</h2>    Alt + Shift + A (Comment Line Shortcut)--> 
     
