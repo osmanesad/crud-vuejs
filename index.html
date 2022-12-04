@@ -10,7 +10,11 @@
 
 </head>
 <body>
-    <div id="app">{{ message}} <br> {{ message2}}</div>
+    <div id="app">{{ message}} <br> 
+        <input type="text" v-model="UserMessage"/>
+       <h2>{{ UserMessage }}</h2> 
+    
+    </div>
     
 
     <script>
@@ -20,7 +24,7 @@
           data() {
             return {
               message: 'Hello Vue!',
-              message2: "Vue.js ile CRUD işlemlerini yapıyoruz."
+              UserMessage: "Vue.js ile CRUD işlemlerini yapıyoruz."
             }
           }
         }).mount('#app')
