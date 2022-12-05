@@ -33,7 +33,7 @@
         </div>
         <br/>
 
-        <button type="submit" class="btn btn-sm btn-success">Ekle</button>
+        <button type="submit" class="btn btn-success">Ekle</button>
 
     </form>
   </div>
@@ -60,6 +60,7 @@ export default {
 <style scoped>
 #addForm{
 color: blueviolet;
+
 
 }
 
