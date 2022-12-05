@@ -4,7 +4,7 @@
 
         <div class="form-group">
             <label for="id">Id</label>
-            <input v-model="product.id" type="text" class="form-control" id="id" />
+            <input v-model="product.id" placeholder="ID Otomatik atanmaktadır." readonly type="text" class="form-control" id="id" />
         </div>
 
         <div class="form-group">

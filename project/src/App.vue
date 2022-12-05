@@ -40,8 +40,14 @@ export default {
     updateProduct() {
        
     },
-    addProduct(product) {
-      const newProduct = {...product}
+    async addProduct(product) {
+      const result = await fetch('http://localhost:3000/products', {
+        method: 'POST',
+        body: JSON.stringify(product),
+        headers:{"Content-Type":"application/json"}
+      })
+
+      const newProduct = await result.json()
       this.products = [...this.products, newProduct]
     }
   }
