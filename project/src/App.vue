@@ -32,7 +32,10 @@ export default {
       const data = await result.json()
       this.products = data;
     },
-    deleteProduct(product) {
+    async deleteProduct(product) {
+      await fetch('http://localhost:3000/products/'+product.id, {
+        method:'DELETE'
+      })
       this.products = this.products.filter(
         productToFilter=>productToFilter.id!==product.id
       )
