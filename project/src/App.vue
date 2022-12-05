@@ -1,17 +1,22 @@
 <template>
   <!-- Buraya HelloWorld.veu içerisinde "template" kısmında ne yaptıysam oonu çağırıyor.  -->
   <div id="app">
+    
     <ProductList @delete:product="deleteProduct" @update:product="updateProduct"  :products="products"/> <!-- Eyy ProductList eğer olurda bana bir event yollarsan -> @delete:product="" -->
+    <br/>
+    <h3>Ürün Ekle</h3>
+    <ProductAdd @add:product="addProduct" />
   </div>
 </template>
 
 <script>
 import ProductList from "./components/ProductList.vue";
+import ProductAdd from "./components/ProductAdd.vue";
 
 export default {
   name: "app",
   components: {
-    ProductList
+    ProductList, ProductAdd
   },
   data() {
     return {
@@ -30,6 +35,10 @@ export default {
     },
     updateProduct() {
        
+    },
+    addProduct(product) {
+      const newProduct = {...product}
+      this.products = [...this.products, newProduct]
     }
   }
 }
@@ -40,8 +49,8 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  padding: 10px;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 </style>
