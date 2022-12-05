@@ -20,14 +20,18 @@ export default {
   },
   data() {
     return {
-      products: [
-        {id: 1,categoryId: 1, productName: "A4 Fotokopi Kağıdı", quantityPerUnit: "CopierBon 80gr Fotokopi kağıdı." /* Ürün açıklaması */, unitPrice: 470, unitInStock: 20},
-        {id: 2, categoryId: 1, productName: "Pensan Büro Kalemi", quantityPerUnit: "Mavi ince uçlu tükenmez kalem" /* Ürün açıklaması */, unitPrice: 45, unitInStock: 13},
-        {id: 3, categoryId: 2, productName: "AYT Soru Bankası", quantityPerUnit: "AYT Sayısal bölümü tüm dersler soru bankası" /* Ürün açıklaması */, unitPrice: 138, unitInStock: 34}
-      ]
+      products: []
     }
   },
+  mounted() {
+    this.getProducts()
+  },
   methods: {
+    async getProducts() {
+      const result = await fetch('http://localhost:3000/products')
+      const data = await result.json()
+      this.products = data;
+    },
     deleteProduct(product) {
       this.products = this.products.filter(
         productToFilter=>productToFilter.id!==product.id
@@ -46,12 +50,11 @@ export default {
 
 <style>
 #app {
-  margin: 0%;
-  padding: 0%;
+  
  margin-top: 20px;
   color: rgb(0, 0, 0);
   display: flex;
-  align-items: center;
+  padding: 20px;
   flex-direction: column;
   width: 100%;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",

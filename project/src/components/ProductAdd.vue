@@ -58,10 +58,5 @@ export default {
 </script>
 
 <style scoped>
-#addForm{
-color: blueviolet;
-
-
-}
 
 </style>
