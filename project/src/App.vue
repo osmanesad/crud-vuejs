@@ -1,14 +1,17 @@
 <template>
-  <HelloWorld msg="Merhaba Dünya"/> <!-- Buraya HelloWorld.veu içerisinde "template" kısmında ne yaptıysam oonu çağırıyor.  -->
+  <!-- Buraya HelloWorld.veu içerisinde "template" kısmında ne yaptıysam oonu çağırıyor.  -->
+  <ProductList/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import ProductList from './components/ProductList.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+   
+    ProductList
   }
 }
 </script>
