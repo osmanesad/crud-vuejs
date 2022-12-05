@@ -1,7 +1,7 @@
 <template>
   <!-- Buraya HelloWorld.veu içerisinde "template" kısmında ne yaptıysam oonu çağırıyor.  -->
   <div id="app">
-    <ProductList :products="products"/>
+    <ProductList @delete:product="deleteProduct"  :products="products"/> <!-- Eyy ProductList eğer olurda bana bir event yollarsan -> @delete:product="" -->
   </div>
 </template>
 
@@ -20,6 +20,13 @@ export default {
         {id: 2, categoryId: 1, productName: "Pensan Büro Kalemi", quantityPerUnit: "Mavi ince uçlu tükenmez kalem" /* Ürün açıklaması */, unitPrice: 45, unitInStock: 13},
         {id: 3, categoryId: 2, productName: "AYT Soru Bankası", quantityPerUnit: "AYT Sayısal bölümü tüm dersler soru bankası" /* Ürün açıklaması */, unitPrice: 138, unitInStock: 34}
       ]
+    }
+  },
+  methods: {
+    deleteProduct(product) {
+      this.products = this.products.filter(
+        productToFilter=>productToFilter.id!==product.id
+      )
     }
   }
 }

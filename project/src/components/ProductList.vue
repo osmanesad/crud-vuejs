@@ -1,10 +1,10 @@
 <template>
     <div> <!-- Mutlaka div ile başlamak iyidir. -->
 
-        <h3> Product List</h3>
+        <h3>Stok Listesi</h3>
 
         <p v-if="products.length==0">Stok'ta ürün bulunmamaktadır.</p>
-        <table class="table table-bordered">
+        <table v-else class="table table-bordered">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -13,6 +13,7 @@
                     <th>Ürün Açıklama</th>
                     <th>Birim Fiyat</th>
                     <th>Stok</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,7 @@
                         <td>{{product.quantityPerUnit}}</td>
                         <td>{{product.unitPrice}}</td>
                         <td>{{product.unitInStock}}</td>
+                        <td><button class="btn btn-sm btn-danger" @click="handleDelete(product)">Sil</button></td>
                     </tr>
                 </tbody>
         </table>
@@ -37,6 +39,15 @@ export default {
     name:"product-list",
     props:{
         products:Array
+    },
+    methods: {
+        handleDelete(product) {
+            this.$emit("delete:product",product)
+            
+        },
+        handleUpdate() {
+            
+        }
     }
 };
 
