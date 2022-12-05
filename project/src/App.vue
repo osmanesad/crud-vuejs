@@ -1,7 +1,7 @@
 <template>
   <!-- Buraya HelloWorld.veu içerisinde "template" kısmında ne yaptıysam oonu çağırıyor.  -->
   <div id="app">
-    <ProductList @delete:product="deleteProduct"  :products="products"/> <!-- Eyy ProductList eğer olurda bana bir event yollarsan -> @delete:product="" -->
+    <ProductList @delete:product="deleteProduct" @update:product="updateProduct"  :products="products"/> <!-- Eyy ProductList eğer olurda bana bir event yollarsan -> @delete:product="" -->
   </div>
 </template>
 
@@ -27,6 +27,9 @@ export default {
       this.products = this.products.filter(
         productToFilter=>productToFilter.id!==product.id
       )
+    },
+    updateProduct() {
+       
     }
   }
 }
