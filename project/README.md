@@ -1,4 +1,13 @@
-# project
+# VUE.js ile CRUUD işlemleri
+
+Aşağıda gerekli kurulum adımları verilmiştir.
+Proje dosylarını bir arada tuttuktan sonra sırasıyla terminalinizde
+gerekli işlemleri başlatın.
+
+Ürünlerin listelenebilmesi için json-server işleminin ayrıca başlatılması gerekmektedir.
+
+Örnek veritabanı dosyamız 'api/db.json' konumundadır.
+Terminalinizde bu konuma geldikten sonra json-server'ı başlatınız.
 
 ## Project setup
 ```
@@ -18,6 +27,14 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
+```
+
+### Json Server Setup
+```
+npm install -g json-server
+```
+```
+json-server --watch db.json
 ```
 
 ### Customize configuration
