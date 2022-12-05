@@ -1,4 +1,4 @@
-# VUE.js ile CRUUD işlemleri
+# VUE.js ile CRUD işlemleri
 
 Aşağıda gerekli kurulum adımları verilmiştir.
 Proje dosylarını bir arada tuttuktan sonra sırasıyla terminalinizde
