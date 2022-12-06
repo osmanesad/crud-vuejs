@@ -3,9 +3,9 @@
         <!-- Mutlaka div ile başlamak iyidir. -->
 
         <h3>Stok Listesi</h3>
-
+       
         <p v-if="products.length == 0">Stok'ta ürün bulunmamaktadır.</p>
-        <table v-else class="table table-bordered">
+        <table v-else class="table table-striped table-bordered table-sm">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -75,8 +75,10 @@
 <script>
 export default {
     name: "product-list",
+    
     data() {
         return { updateId: null };
+        
     },
     props: {
         products: Array,
@@ -93,8 +95,14 @@ export default {
             this.updateId = null
         }
     },
+    
+    
 };
+
+
 </script>
+
+
 
 <style scoped>
 
