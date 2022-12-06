@@ -31,6 +31,15 @@
       "quantityPerUnit": "Panda Çift Fonksiyonlu Mantar Pano + Beyaz Yazı Tahtası 60 cm x 90 cm",
       "unitPrice": "109,20 TL",
       "unitInStock": "4"
+    },
+    {
+      "id": 5,
+      "categoryId": "",
+      "productName": "Faber-Castell Permanent S Siyah Asetat Kalemi",
+      "quantityPerUnit": "0,4 mm çizgi kalınlığı (Super Fine)",
+      "unitPrice": "16,15 TL",
+      "unitInStock": "48",
+      "categoryName": "Kırtasiye"
     }
   ],
   "categories": [
@@ -49,6 +58,5 @@
       "categoryName": "Kırtasiye",
       "seoUrl": "kirtasiye"
     }
-    
   ]
 }
