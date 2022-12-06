@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "categoryId": "1",
+      "categoryName": "Kitap",
       "productName": "Armageddon M.S. 2419",
       "quantityPerUnit": "Philip Francis Novlan",
       "unitPrice": "45,18 TL",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "categoryId": "1",
+      "categoryName": "Kitap",
       "productName": "Dune: Harkonen Hanedanı",
       "quantityPerUnit": "Kevin J. Anderson, Brian Herbert",
       "unitPrice": "30,00 TL",
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "categoryId": "2",
+      "categoryName": "Ofis",
       "productName": "Navigator A4 Fotokopi Kağıdı",
       "quantityPerUnit": "80 gr 1 Koli (5 Paket)",
       "unitPrice": "459,95 TL",
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "categoryId": "2",
+      "categoryName": "Ofis",
       "productName": "Fonksiyonlu Mantar Pano",
       "quantityPerUnit": "Panda Çift Fonksiyonlu Mantar Pano + Beyaz Yazı Tahtası 60 cm x 90 cm",
       "unitPrice": "109,20 TL",
@@ -36,43 +36,19 @@
   "categories": [
     {
       "id": 1,
-      "categoryName": "Beverages",
-      "seoUrl": "beverages"
+      "categoryName": "Kitap",
+      "seoUrl": "kitap"
     },
     {
       "id": 2,
-      "categoryName": "Condiments",
-      "seoUrl": "condiments"
+      "categoryName": "Ofis",
+      "seoUrl": "ofis"
     },
     {
       "id": 3,
-      "categoryName": "Confections",
-      "seoUrl": "confections"
-    },
-    {
-      "id": 4,
-      "categoryName": "Dairy Products",
-      "seoUrl": "dairy-products"
-    },
-    {
-      "id": 5,
-      "categoryName": "Grains/Cereals",
-      "seoUrl": "grains-cereals"
-    },
-    {
-      "id": 6,
-      "categoryName": "Meat/Poultry",
-      "seoUrl": "meat-poultry"
-    },
-    {
-      "id": 7,
-      "categoryName": "Produce",
-      "seoUrl": "produce"
-    },
-    {
-      "id": 8,
-      "categoryName": "Seafood",
-      "seoUrl": "seafood"
+      "categoryName": "Kırtasiye",
+      "seoUrl": "kirtasiye"
     }
+    
   ]
 }

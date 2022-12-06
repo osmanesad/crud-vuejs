@@ -30,9 +30,9 @@
                     <td v-else>{{ product.productName }}</td>
 
                     <td v-if="updateId === product.id">
-                        <input v-model="product.categoryId" type="text" class="form-control" id="categoryId" />
+                        <input v-model="product.categoryName" type="text" class="form-control" id="categoryName" />
                     </td>
-                    <td v-else>{{ product.categoryId }}</td>
+                    <td v-else>{{ product.categoryName }}</td>
 
                     <td v-if="updateId === product.id">
                         <input v-model="product.quantityPerUnit" type="text" class="form-control"
